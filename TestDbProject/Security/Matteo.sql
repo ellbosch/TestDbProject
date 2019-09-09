@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [Matteo]
+    WITH PASSWORD = N'8q{xpMmb7jdxscbl|xkl|qi{msFT7_&#$!~<sau9ngMleoOi', SID = 0x460C61654480F44C909B7D41F5BFD90F, CHECK_POLICY = OFF;
+

@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [Matteo2]
+    WITH PASSWORD = N'q{xpmdbdjdxscb9l:|UM;yxkmsFT7_&#$!~<l%qi{s@^au;n', SID = 0xAE34338CACE876428DA54F2DE6B3CED3, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

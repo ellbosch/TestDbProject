@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>TestDbProject</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{249c7ce9-fb38-4419-b7da-476704b7a3c9}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>TestDbProject</RootNamespace>
+    <AssemblyName>TestDbProject</AssemblyName>
+    <ModelCollation>1033,CS</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CS_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Server Objects\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\Categories.sql" />
+    <Build Include="dbo\Tables\Customers.sql" />
+    <Build Include="dbo\Tables\Shippers.sql" />
+    <Build Include="dbo\Tables\Suppliers.sql" />
+    <Build Include="dbo\Tables\Orders.sql" />
+    <Build Include="dbo\Tables\Products.sql" />
+    <Build Include="dbo\Tables\Order Details.sql" />
+    <Build Include="dbo\Tables\CustomerCustomerDemo.sql" />
+    <Build Include="dbo\Tables\CustomerDemographics.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\Territories.sql" />
+    <Build Include="dbo\Tables\EmployeeTerritories.sql" />
+    <Build Include="dbo\Views\Customer and Suppliers by City.sql" />
+    <Build Include="dbo\Views\Alphabetical list of products.sql" />
+    <Build Include="dbo\Views\Current Product List.sql" />
+    <Build Include="dbo\Views\Orders Qry.sql" />
+    <Build Include="dbo\Views\Products Above Average Price.sql" />
+    <Build Include="dbo\Views\Products by Category.sql" />
+    <Build Include="dbo\Views\Quarterly Orders.sql" />
+    <Build Include="dbo\Views\Invoices.sql" />
+    <Build Include="dbo\Views\Order Details Extended.sql" />
+    <Build Include="dbo\Views\Order Subtotals.sql" />
+    <Build Include="dbo\Views\Product Sales for 1997.sql" />
+    <Build Include="dbo\Views\Category Sales for 1997.sql" />
+    <Build Include="dbo\Views\Sales by Category.sql" />
+    <Build Include="dbo\Views\Sales Totals by Amount.sql" />
+    <Build Include="dbo\Views\Summary of Sales by Quarter.sql" />
+    <Build Include="dbo\Views\Summary of Sales by Year.sql" />
+    <Build Include="Server Objects\CustomMessages.sql" />
+    <Build Include="Server Objects\LinkedServers.sql" />
+    <Build Include="Security\LinkedServerLogins.sql" />
+    <Build Include="Security\sa.sql" />
+    <Build Include="Security\REDMOND_ssmsdevteam.sql" />
+    <Build Include="Security\NT SERVICE_SQLWriter.sql" />
+    <Build Include="Security\NT SERVICE_Winmgmt.sql" />
+    <Build Include="Security\NT SERVICE_MSSQLSERVER.sql" />
+    <Build Include="Security\NT AUTHORITY_SYSTEM.sql" />
+    <Build Include="Security\NT SERVICE_SQLSERVERAGENT.sql" />
+    <Build Include="Security\NT AUTHORITY_NETWORK SERVICE.sql" />
+    <Build Include="Security\l_certSignSmDetach.sql" />
+    <Build Include="Security\NT SERVICE_SQLTELEMETRY.sql" />
+    <Build Include="Security\REDMOND_SQL Tools Test Server Access.sql" />
+    <Build Include="Security\REDMOND_ssmsdevteamnfte.sql" />
+    <Build Include="Security\REDMOND_ssdtdevteamnfte.sql" />
+    <Build Include="Security\FAREAST_datatoolstestresourcesfareast.sql" />
+    <Build Include="Security\Redmond_DSEngAll.sql" />
+    <Build Include="Security\Redmond_sqlt01.sql" />
+    <Build Include="Security\Redmond_SqlCL01.sql" />
+    <Build Include="Security\Redmond_SQLCL02.sql" />
+    <Build Include="Security\Redmond_sqlbld0.sql" />
+    <Build Include="Security\europe_ssdtsqlpartnerseu.sql" />
+    <Build Include="Security\fareast_ssdtsqlpartnersfe.sql" />
+    <Build Include="Security\Redmond_DataToolsTestResources.sql" />
+    <Build Include="Security\NTDEV_DAVIDSHI.sql" />
+    <Build Include="Security\adstest.sql" />
+    <Build Include="Security\REDMOND_ssdtsqlpartners.sql" />
+    <Build Include="Security\NTDEV_ssdtsqlpartnersntdev.sql" />
+    <Build Include="Security\MIDDLEEAST_ssdtsqlpartnersme.sql" />
+    <Build Include="Security\TestLogin99.sql" />
+    <Build Include="Security\SmoBaselineVerification_Login.sql" />
+    <Build Include="Security\Matteo.sql" />
+    <Build Include="Security\Matteo2.sql" />
+    <Build Include="Security\Matteo_Danish.sql" />
+    <Build Include="Security\matteot_Bokmal.sql" />
+    <Build Include="Security\mssql_cli_login_d126ad2b28e645ecb89c13e2060b70a8.sql" />
+    <Build Include="Security\REDMOND_kenvh.sql" />
+    <Build Include="Security\FAREAST_v-abdesh.sql" />
+    <Build Include="Security\FAREAST_v-sodixi.sql" />
+    <Build Include="Security\FAREAST_v-stfe.sql" />
+    <Build Include="Security\FAREAST_v-shbagl.sql" />
+    <Build Include="Security\FAREAST_v-manpat.sql" />
+    <Build Include="Security\FAREAST_kardiva.sql" />
+    <Build Include="Security\mssql_cli_login_1e6f436d23f743fc82042667797821d3.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_95c0f876_b3c6_45f5_9f69_3f108736fb6c_03d804ec-c29a-48c2-a0fe-98feb6ac1475.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_95c0f876_b3c6_45f5_9f69_3f108736fb6c_0946a678-2b9a-4f8c-b252-11226bc7f88d.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_95c0f876_b3c6_45f5_9f69_3f108736fb6c_dcef0799-fe52-46c5-827d-c54b2eec5744.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_95c0f876_b3c6_45f5_9f69_3f108736fb6c_766c8192-eae1-4c3b-a5be-28da42e802b5.sql" />
+    <Build Include="Security\REDMOND_t-yuey.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_6521cf66-9b45-46ef-b584-b78e3be561cd.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_33ed44ae-29bb-4cc4-b2ce-d68feb740a29.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_32252334-0e0c-46e3-af65-43defabae920.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_9699d359-bb8e-4022-a60e-f2197229989f.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_e9bccf4c-9251-4b3f-8f5f-ce4febc9f5a9.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_21c1d344-e30b-4e0e-91b3-886c920091f8.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_eaa82b01-4e14-4cb4-8c3a-50c2deb31b43.sql" />
+    <Build Include="Security\RemoveSqlLoginTest_b61d1c46_7e4f_43ae_80c3_e828ced3171e_fa32131a-a314-4a7f-8d4e-3607aa992898.sql" />
+    <Build Include="Security\_95d7d9c7_54cb_4b51_9fe5_60958dcfdc0c.sql" />
+    <Build Include="Security\_9e8684dc_82b1_4354_99c4_2b4ae482b8e5.sql" />
+    <Build Include="Security\_80029005_2793_4683_b931_63a6da4e1576.sql" />
+    <Build Include="Security\_d4fa9b5b_c72b_4df7_b887_852d4be9fc83.sql" />
+    <Build Include="Security\_02ff1ef5_f935_4fa1_8021_02edaacb0219.sql" />
+    <Build Include="Security\_cbc5285b_29ad_40a1_858f_1d7960bf1be6.sql" />
+    <Build Include="Security\_f32f3414_953b_4ab2_96b1_c74d106e3a42.sql" />
+    <Build Include="Security\_3554eb50_867b_47eb_b172_8d9d7a2d4ce5.sql" />
+    <Build Include="Security\_776de08f_e43f_4de7_bb16_37ef8e119fef.sql" />
+    <Build Include="Security\_1d604e21_4c1b_4fc6_8570_7ba7b2e8b790.sql" />
+    <Build Include="Security\_c6859718_3511_491b_a578_2660b44aceff.sql" />
+    <Build Include="Security\_c72cf3fc_04df_4fa4_8743_8c4a2d9a35de.sql" />
+    <Build Include="Security\REDMOND_elbosc.sql" />
+    <Build Include="Security\_62b8ed67_6c7d_47e3_8730_4278b63f06fb.sql" />
+    <Build Include="Security\_436fef85_868f_4d69_bafe_fb45974a3dc9.sql" />
+    <Build Include="Security\_72e09029_7cce_44fc_8e02_935135709e64.sql" />
+    <Build Include="Security\_eae387f2_6aef_4b1a_a9ce_955d46156d33.sql" />
+    <Build Include="Security\_f1776a1d_74de_4209_82ea_5a93da3cb4f4.sql" />
+    <Build Include="Security\_2aaf18d2_2db9_489c_88a5_7cd3576d1f02.sql" />
+    <Build Include="Security\_20670d62_7af6_4a1e_9d0c_bb3db3df9ab8.sql" />
+    <Build Include="Security\_6843c14a_39fe_454d_8fd7_e2255bfd30df.sql" />
+    <Build Include="Security\_f70bc0c1_a602_49a2_b77b_1011d133d6af.sql" />
+    <Build Include="Security\_9f39d29c_32cd_43b0_b2ca_5800079ed65a.sql" />
+    <Build Include="Security\_01277f4b_f786_420e_8be0_87a6a5e05a3f.sql" />
+    <Build Include="Security\SmoBaselineVerification_ServerRole.sql" />
+    <Build Include="Security\TestUser99.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\Ten Most Expensive Products.sql" />
+    <Build Include="dbo\Stored Procedures\Employee Sales by Country.sql" />
+    <Build Include="dbo\Stored Procedures\Sales by Year.sql" />
+    <Build Include="dbo\Stored Procedures\CustOrdersDetail.sql" />
+    <Build Include="dbo\Stored Procedures\CustOrdersOrders.sql" />
+    <Build Include="dbo\Stored Procedures\CustOrderHist.sql" />
+    <Build Include="dbo\Stored Procedures\SalesByCategory.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_ServerTrigger.sql" />
+    <Build Include="Server Objects\RELoginTrigger_DIsabled.sql" />
+    <Build Include="Security\___PDW_SmDetachSigningCertificate__.sql" />
+    <Build Include="Security\DEK_SmoTestSuite_ServerCertificate.sql" />
+    <Build Include="Security\SmoBaselineVerification_ServerCertificate.sql" />
+    <Build Include="Server Objects\RECredential.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_Credential.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_DatabaseMirroringEndpoint.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_ServiceBrokerEndpoint.sql" />
+    <Build Include="Security\MasterKeys.sql" />
+    <Build Include="Server Objects\REServerAuditSpecification.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_ServerAuditSpecification.sql" />
+    <Build Include="Server Objects\RE_ServerAudit.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem12b664f2-c65b-43c7-bb32-30e9bd068971.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_ServerAudit.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem876a600d-dd6d-47b3-b2ba-47ffeb22d14f.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremf60746d2-a292-4afb-ba1a-2d1d6b73ede2.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremba2e5d12-fc0d-4f42-9754-8e226803006f.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremfcd5211f-9cf3-4206-a0d5-91642f0791c3.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem6db7e283-d609-4731-bbd0-f65684fd7197.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrembcb9fee4-2334-4cff-a8a9-fffc26e9889e.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem4c1506f9-1e9a-4474-bd3d-97066408efe8.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremab1f0e73-99d7-4db0-866c-7c84536956b5.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrembef5ebef-3218-42da-b9c0-cec09e8489c5.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem64d591bf-5188-428b-b282-c5f5301df7e3.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem2687a475-e422-4951-93dd-5cddd48f1017.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremc73fc237-ea27-43b9-b955-46872edbf35c.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem792b0bb5-5e3a-46a5-a0e9-bee3c93a6243.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremb449c5b6-6eb1-4931-a9d6-68dfefdad952.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem48c2db64-1ee6-4ca9-9dc3-cd8f96009721.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrema504c6db-622e-46d0-a1e7-206b2bce669e.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem5f2ca749-4ddd-45b4-933f-f35802301717.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem233c7f48-d41b-444c-a3f0-960a2b7d3f68.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem9e6a704e-5957-4aaa-8e1c-f5e0accb9421.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem47f09d87-6f5c-4fb3-bf47-6118531dd339.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem231e087a-6ede-425c-8e1f-687efccf69cb.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem222738f3-cd44-48e5-b4c2-87006208477c.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem0f0819ae-f434-42f4-a8a0-90bb1dbd1ad5.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremcbbee77a-fa40-447e-88b9-a1a28e0fb7dd.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremcc2d9bda-1894-4137-8aeb-9a304aff8ee7.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem8e8a379f-81b8-4ace-b273-a948480bf583.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem1dc1b1d6-e086-4baa-85ee-3d7f0dcc6ff2.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem595e6172-a3ea-4624-96d9-28c28ec8bc53.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremd67f2453-3240-47a5-b23f-a94b8b2a3d20.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem1d7791db-0e8f-4c23-8546-5b8e99f73f67.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremb8a7c654-1519-404c-9858-9b9a1459303c.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremd2ec82fd-32fe-4ff3-a075-54623144f2ca.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremb6480823-4453-48be-8a2a-23a13843bd99.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem04741d8b-0541-4f0b-9cf3-f1c4dc1078b5.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem7548a76b-5b0f-4f66-bd38-080cc397adfb.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem9873b108-19dc-49dc-8c52-15cce4447570.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremfb63794b-fe8e-49d7-a816-c843447a63f6.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremb4f1f811-8f38-4f80-9e4f-eccd31350491.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremfd0d2859-0f2a-46c1-a1cd-012c6aa62d01.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem7ca081f3-34fe-4d81-876f-ac796b5c2d6b.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremd4853f15-3659-4aa4-a8b9-467e2a2cb5f8.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremaf14c71f-9cf4-4cd7-ae39-b29ed2ab42c5.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremdbe02f59-9371-4b63-a109-a84487af087d.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremcb82084f-e8ee-4510-8758-21ed22843513.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem5adad776-c988-4a6d-a872-9c26f86b4263.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem849aabee-e478-4152-bdab-cd3ea91a0bef.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem5d90d345-2e51-4779-a599-e1ae955c38aa.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremd1e20a5a-d45a-439a-aa3c-04f5cb2b2a08.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremab800928-8dad-4578-aa58-b5304bbd6953.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem11f31849-1d1d-4661-88bd-9bfa4bd13fed.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem137dd797-7b37-4658-a88b-af611d6099d4.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremf63040e5-7bd6-4d05-a9a5-a7c5a38906b5.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem82506624-f643-404c-a270-fd8fe5e98d7d.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrem7c2ca788-cbcc-49ad-81ea-133c5f2e0ddd.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremb03724d3-1028-4f2c-a54b-95da6c2c8048.sql" />
+    <Build Include="Server Objects\audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPrembac03895-9797-4652-af11-a5cf8ed2372b.sql" />
+    <Build Include="Server Objects\SmoBaselineVerification_CryptographicProvider.sql" />
+    <Build Include="Server Objects\AlwaysOn_health.sql" />
+    <Build Include="Server Objects\ADS_Standard_OnPrem.sql" />
+    <Build Include="Server Objects\ADS_Standard_OnPrem2.sql" />
+    <Build Include="Server Objects\ADS_Standard_OnPrem3.sql" />
+    <Build Include="Server Objects\ADS_Standard_OnPrem818.sql" />
+    <Build Include="Server Objects\ADS_Standard_OnPrem827.sql" />
+    <Build Include="Server Objects\ADS_Standard_OnPrem94.sql" />
+    <Build Include="Server Objects\telemetry_xevents.sql" />
+  </ItemGroup>
+</Project>

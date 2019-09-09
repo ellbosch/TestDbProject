@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [MIDDLEEAST\ssdtsqlpartnersme]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

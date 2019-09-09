@@ -1,0 +1,7 @@
+﻿CREATE LOGIN [_95d7d9c7_54cb_4b51_9fe5_60958dcfdc0c]
+    WITH PASSWORD = N'Vq{xp?mb+j7Cdxscbl|xk,JlmsFT7_&#$!~<2tqi{sa9cung', SID = 0x870D60E9AD3FE148BDC13C9D5CCC95D8, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
+
+GO
+ALTER LOGIN [_95d7d9c7_54cb_4b51_9fe5_60958dcfdc0c] DISABLE;
+

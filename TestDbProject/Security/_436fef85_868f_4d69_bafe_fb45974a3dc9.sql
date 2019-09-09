@@ -1,0 +1,7 @@
+﻿CREATE LOGIN [_436fef85_868f_4d69_bafe_fb45974a3dc9]
+    WITH PASSWORD = N'duLHtqo!07esGdltaes,|tuumsFT7_&#$!~<~lvvulw;euyq', SID = 0x029F48F5ADFB544AB9D11E0410541C99, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
+
+GO
+ALTER LOGIN [_436fef85_868f_4d69_bafe_fb45974a3dc9] DISABLE;
+

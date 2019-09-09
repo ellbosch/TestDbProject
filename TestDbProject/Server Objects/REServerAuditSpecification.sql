@@ -1,0 +1,3 @@
+﻿CREATE SERVER AUDIT SPECIFICATION [REServerAuditSpecification]
+    FOR SERVER AUDIT [RE_ServerAudit];
+

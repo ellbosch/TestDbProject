@@ -1,0 +1,7 @@
+﻿CREATE LOGIN [_cbc5285b_29ad_40a1_858f_1d7960bf1be6]
+    WITH PASSWORD = N'd=ui;?tqs3dqltUsK|t|uulvmsFT7_&#$!~<ueuqdzosrzxs', SID = 0x06B5FC2EAD81CD47AD24F4C16287903D, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
+
+GO
+ALTER LOGIN [_cbc5285b_29ad_40a1_858f_1d7960bf1be6] DISABLE;
+

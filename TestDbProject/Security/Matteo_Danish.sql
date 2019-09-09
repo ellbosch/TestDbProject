@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [Matteo_Danish]
+    WITH PASSWORD = N'Vq{OxpmbjdxJDs>cbluIl|xkmsFT7_&#$!~<klqi{3saZWun', SID = 0x242D057D88B65246AB96695636354724, DEFAULT_LANGUAGE = [Dansk], CHECK_POLICY = OFF;
+

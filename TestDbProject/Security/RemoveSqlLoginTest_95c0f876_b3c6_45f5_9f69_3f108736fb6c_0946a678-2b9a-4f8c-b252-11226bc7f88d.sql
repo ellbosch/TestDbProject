@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [RemoveSqlLoginTest_95c0f876_b3c6_45f5_9f69_3f108736fb6c_0946a678-2b9a-4f8c-b252-11226bc7f88d]
+    WITH PASSWORD = N'qw:{M?x.pml0bDjdd?xscbl|msFT7_&#$!~<xklqDDi{saun', SID = 0x9E2F58BF4085BA4488C0146024994D85, DEFAULT_LANGUAGE = [us_english];
+

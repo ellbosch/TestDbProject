@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [REDMOND\ssmsdevteam]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

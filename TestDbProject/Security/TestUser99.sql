@@ -1,0 +1,2 @@
+﻿CREATE USER [TestUser99] WITHOUT LOGIN;
+

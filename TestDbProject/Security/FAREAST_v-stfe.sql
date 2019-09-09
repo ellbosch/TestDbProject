@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [FAREAST\v-stfe]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

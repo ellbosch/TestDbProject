@@ -1,0 +1,7 @@
+﻿CREATE LOGIN [_c72cf3fc_04df_4fa4_8743_8c4a2d9a35de]
+    WITH PASSWORD = N'du+tsqsdltks|tHuuXlfvueumsFT7_&#$!~<qP~dzosznxsp', SID = 0x303E497828C68B4DBA0B796322F8F178, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
+
+GO
+ALTER LOGIN [_c72cf3fc_04df_4fa4_8743_8c4a2d9a35de] DISABLE;
+

@@ -1,0 +1,7 @@
+﻿CREATE LOGIN [_eae387f2_6aef_4b1a_a9ce_955d46156d33]
+    WITH PASSWORD = N'dutqsd:xlt!saR|tuAulvueumsFT7_&#$!~<qydxzho^szxO', SID = 0x966710999E455D4C92279B64C07EEC6F, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
+
+GO
+ALTER LOGIN [_eae387f2_6aef_4b1a_a9ce_955d46156d33] DISABLE;
+

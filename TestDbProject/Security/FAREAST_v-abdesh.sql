@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [FAREAST\v-abdesh]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

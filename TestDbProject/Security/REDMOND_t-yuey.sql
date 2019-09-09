@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [REDMOND\t-yuey]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

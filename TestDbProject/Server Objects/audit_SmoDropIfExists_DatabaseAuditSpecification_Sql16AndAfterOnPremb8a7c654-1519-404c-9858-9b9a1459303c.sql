@@ -1,0 +1,2 @@
+﻿CREATE SERVER AUDIT [audit_SmoDropIfExists_DatabaseAuditSpecification_Sql16AndAfterOnPremb8a7c654-1519-404c-9858-9b9a1459303c] TO APPLICATION_LOG WITH (AUDIT_GUID = '006b09ed-ca92-4655-8965-5cb77049fbaa');
+
